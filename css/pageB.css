@@ -1,0 +1,88 @@
+/**
+ * 圣诞小男孩
+ */
+
+.princess {
+    width: 3.5rem;
+    height: 4.06rem;
+    position: absolute;
+    z-index: 5;
+    right: -3.5rem;
+    top: 4rem;
+    background: url(../imgs/princess.png);
+    background-size: 200% 100%;
+}
+.princess-walk{
+    animation: princess_walk 1s steps(2, start) infinite;
+
+}
+
+@keyframes princess_walk {
+   
+    to{
+        background-position-x: -200%;
+    }
+}
+.princess-stand {
+    background-position: 0 100%;
+}
+
+
+/**
+ * 狗狗睡觉
+ */
+
+.dog {
+    width: 1.7rem;
+    height: 2.0rem;
+    position: absolute;
+    z-index: 10;
+    left: 0.4rem;
+    top: 4.8rem;
+    background: url(../imgs/dog.png);
+    background-size: 500% 100%;
+}
+
+/**
+ * 起身
+ */
+
+.dog-standUp {
+    left: 0.4rem;
+    animation: standUp 200ms steps(2, end) forwards;
+    -moz-animation: standUp 200ms steps(2, end) forwards;
+}
+
+@keyframes standUp {
+    100%{
+        background-position: -100% 0;
+    }
+}
+
+
+/**
+ * 狗狗
+ */
+
+.dog-walk {
+	left: 0.4rem;
+    animation: dogWalk 1s steps(2, end) infinite;
+    -moz-animation: dogWalk 1s steps(2, end) infinite;
+}
+
+@keyframes dogWalk {
+    0% {
+        background-position: -200% 0;
+    }
+    100%{
+        background-position: -400% 0;
+    }
+}
+/**
+ * 站立动作
+ */
+
+.dog-stand {
+    top: 4.8rem;
+    background-position: -400% 100%;
+}

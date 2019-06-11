@@ -1,0 +1,99 @@
+.tree1 {
+    width: 4.2rem;
+    height: 3rem;
+    z-index: 15;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url(../imgs/tree.png);
+    background-size: 200% 100%;
+    animation: treeAnim 1s steps(2) infinite;
+
+}
+@keyframes treeAnim{
+    to{ background-position: -200% 100%;}
+}
+
+/*月亮*/
+
+.moon {
+    background: #FCF0BC;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+    box-shadow: 0 0 0.5rem #FCF0BC;
+    position: absolute;
+    left: 3.3rem;
+    top: .8rem;
+    animation: nucleus 2s infinite linear;
+    -moz-animation: nucleus 2s infinite linear;
+}
+/*光晕效果*/
+@keyframes nucleus{
+    0% {
+        box-shadow: 0 0 0 transparent;
+    }
+    50% {
+        box-shadow: 0 0 1.4rem #FCF0BC;
+    }
+    100% {
+        box-shadow: 0 0 0 transparent;
+    }
+}
+
+/*云*/
+.cloudy {
+    background: #60768D;
+    border-radius: 50%;
+    /*五个参数的时候，表示扩大（＋）或缩小倍数（－）*/
+    /*box-shadow: #60768D 0.4rem -0.3rem, #60768D .6rem 0.2rem 0 -0.2rem;*/
+    box-shadow:#60768D 0.4rem -0.2rem,#60768D 0.5rem 0.1rem, #60768D .8rem -0.2rem 0 -0.1rem,#60768D .9rem 0 0 -0.1rem;
+    height:0.6rem;
+    width: 0.6rem;
+    position: absolute;
+    left: .5rem;
+    top: 1.8rem;
+    z-index: 5;
+    animation: cloudy 5s ease-in-out infinite;
+    -moz-animation: cloudy 5s ease-in-out infinite;
+}
+@keyframes cloudy{
+    50% {
+        -webkit-transform: translateY(-0.3rem);
+    }
+}
+
+
+/**
+ * 南瓜马车
+ */
+
+.lit-princess {
+    width           : 5rem;
+    height          : 1.5rem;
+    position        : absolute;
+    z-index         : 6;
+    top             : .1rem;
+    right           : -3rem;
+    transform       : scale(0.1);
+    background      : url(../imgs/horse.png) -200% -100%;
+    background-size : 300% 100%;
+}
+
+/**
+ * 马车运动动作
+ */
+
+.pumpkin-car {
+    animation:fly 0.75s steps(2,end) infinite;
+    -moz-animation:chsBoyDeer 0.75s steps(2,end) infinite;
+}
+
+@keyframes fly {
+    0% {
+        background-position: -0% 100%;
+    }
+    100% {
+        background-position: -200% 100%;
+    }
+}

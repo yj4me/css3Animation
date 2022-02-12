@@ -60,7 +60,7 @@ function pageB(element, callback) {
 			//狗狗
             $dog.addClass("dog-walk");
 			$dog.transition({
-			        "left": "7.0rem"
+			        "right": "8rem"
 			}, 4000, "linear", function() {
 			        dfd.resolve()
 			 })

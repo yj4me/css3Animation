@@ -6,7 +6,7 @@ html,body{
 .container{
 	width: 100%;
 	height: 100%;
-	position: relative;
+	position: absolute;
 	overflow: hidden;
 }
 .bg-adaptive {
@@ -16,6 +16,7 @@ html,body{
     width: 100%;
     height: 100%;
     background-image: url(../imgs/page1_bg.png);
+    background-size: 100% 100%;
     position: absolute;
     z-index: 5
 }
@@ -23,6 +24,7 @@ html,body{
     width  : 100%;
     height : 100%;
     background-image: url(../imgs/pg2_bg.png);
+    background-size: 100% 100%;
     position: absolute;
     z-index: 4;
 }
@@ -30,6 +32,7 @@ html,body{
     width  : 100%;
     height : 100%;
     background-image: url(../imgs/page1_bg.png);
+    background-size: 100% 100%;
     position: absolute;
     z-index: 3;
 }

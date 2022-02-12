@@ -17,7 +17,7 @@
 	<script type="text/javascript" src="js/pageC.js"></script>
 </head>
 <body>
-	<section class="container">
+	<section class="container" id="container">
 		<!-- page1 -->
 		<section class="page-a bg-adaptive">
 			<!-- 南瓜马车与公主 -->
@@ -48,8 +48,33 @@
 		resizeEvt = 'onorientationchange' in window ? 'orientationchange':'resize',
 		//设置根字体大小
 		recalc = function(){
-			docEl.style.fontSize  = 20 * (docEl.clientWidth / 320) + 'px';
-		}
+	    	console.log(resizeEvt)
+			if(resizeEvt === "resize"){
+                docEl.style.fontSize  = 20 * (docEl.clientWidth / 320) + 'px';
+			}else{
+                docEl.style.fontSize  = 20 * (docEl.clientWidth / 214) + 'px';
+                var width = docEl.clientWidth;
+                var height = docEl.clientHeight;
+                var contentDOM = document.getElementById('container');
+                // 手机端
+                if (window.orientation === 90 || window.orientation === -90) { //旋转到 90 或 -90 度，即竖屏到横屏
+                    screen_width = height; //横屏，灵感的宽度就等于屏高
+                    contentDOM.style.width = height + 'px';
+                    contentDOM.style.height = width + 'px';
+                    contentDOM.style.top = '0px';
+                    contentDOM.style.left = '0px';
+                    contentDOM.style.transform = 'none'; //不旋转；
+                }else{ //旋转到 180 或 0 度，即横屏到竖屏
+                    screen_width = height; //竖屏，灵感的宽度就等于屏高
+                    contentDOM.style.width = height + 'px';
+                    contentDOM.style.height = width + 'px';
+                    contentDOM.style.top = (height - width) / 2 + 'px';
+                    contentDOM.style.left = 0 - (height - width) / 2 + 'px';
+                    contentDOM.style.transform = 'rotate(90deg)'; //旋转90度
+                }
+			}
+		};
+
 	// 绑定浏览器缩放与加载时间
 	window.addEventListener(resizeEvt,recalc,false);
 	document.addEventListener('DOMContentLoaded',recalc,false);

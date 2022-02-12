@@ -3,12 +3,12 @@
  */
 
 .princess {
-    width: 3.5rem;
-    height: 4.06rem;
+    width: 5.25rem;
+    height: 6rem;
     position: absolute;
     z-index: 5;
-    right: -3.5rem;
-    top: 4rem;
+    right: -5.3rem;
+    bottom: 1rem;
     background: url(../imgs/princess.png);
     background-size: 200% 100%;
 }
@@ -33,12 +33,12 @@
  */
 
 .dog {
-    width: 1.7rem;
-    height: 2.0rem;
+    width: 2.5rem;
+    height: 3rem;
     position: absolute;
     z-index: 10;
-    left: 0.4rem;
-    top: 4.8rem;
+    right:calc(100% - 3.4rem);
+    bottom: 1rem;
     background: url(../imgs/dog.png);
     background-size: 500% 100%;
 }
@@ -48,7 +48,7 @@
  */
 
 .dog-standUp {
-    left: 0.4rem;
+    right:calc(100% - 3.4rem);
     animation: standUp 200ms steps(2, end) forwards;
     -moz-animation: standUp 200ms steps(2, end) forwards;
 }
@@ -65,7 +65,7 @@
  */
 
 .dog-walk {
-	left: 0.4rem;
+    right:calc(100% - 3.4rem);
     animation: dogWalk 1s steps(2, end) infinite;
     -moz-animation: dogWalk 1s steps(2, end) infinite;
 }
@@ -83,6 +83,6 @@
  */
 
 .dog-stand {
-    top: 4.8rem;
+    bottom:1rem;
     background-position: -400% 100%;
 }
